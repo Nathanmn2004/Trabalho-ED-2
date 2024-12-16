@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'solver/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resolvedor de Sudoku</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="puzzle">Insira o Puzzle:</label><br><br>
+        <input type="text" id="puzzle" name="puzzle" value="{{ puzzle_input|default:'' }}" required>
+        <br><br>
+        <button type="submit">Resolver</button>
+    </form>
+
+    <div class="resultado">
+        {% if solution %}
+        <h2>Resultado:</h2>
+        <p><strong>Puzzle:</strong> {{ puzzle_input }}</p>
+        <p><strong>Solução:</strong> {{ solution }}</p>
+    {% endif %}
+    </div>
+    </div>
+</body>
+</html>

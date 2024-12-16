@@ -1,0 +1,3 @@
+# Ignorar arquivos maiores que 100MB
+solver/data/sudoku.csv
+*csv
