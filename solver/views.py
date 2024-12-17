@@ -2,6 +2,7 @@ import csv
 import os
 from django.shortcuts import render
 
+
 # Caminho do arquivo CSV
 CSV_PATH = os.path.join(os.path.dirname(__file__), 'data/sudoku.csv')
 

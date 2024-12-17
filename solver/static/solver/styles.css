@@ -1,0 +1,129 @@
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo da Página */
+body {
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    color: #2b6cb0;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    box-shadow: 0 0 5px rgba(43, 108, 176, 0.5);
+}
+
+/* Botão */
+button {
+    padding: 12px 24px;
+    background-color: #2b6cb0;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2c5282;
+    transform: translateY(-2px);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+.resultado h2 {
+    font-size: 1.5rem;
+    color: #2b6cb0;
+    margin-bottom: 10px;
+}
+
+.resultado p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 5px 0;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
